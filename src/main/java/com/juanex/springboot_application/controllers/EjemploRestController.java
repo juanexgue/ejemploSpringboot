@@ -1,33 +1,32 @@
 package com.juanex.springboot_application.controllers;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.juanex.springboot_application.dto.ClaseDTO;
 import com.juanex.springboot_application.models.Empleados;
 
 import org.springframework.web.bind.annotation.RequestMethod;
-
-
 
 @RestController
 @RequestMapping("/api")
 public class EjemploRestController {
 
-@RequestMapping(path="/info2", method=RequestMethod.GET)
+    @RequestMapping(path = "/info2", method = RequestMethod.GET)
 
+    public ClaseDTO info() {
 
-    public Map<String, Object> info(){
+        var usuario1 = new ClaseDTO();
+        usuario1.setTitulo("Administrador");
+        usuario1.setUsuario("juanex");
 
-    Empleados empleado1 = new Empleados("Juan", "Perez",
-     "Micaela", "Developer", 30, 92343424,8);
-
-    Map<String, Object> respuesta = new HashMap<>();
-    respuesta.put("Empleado", empleado1);
-
-    return respuesta;
+        return usuario1;
     }
 
 }
