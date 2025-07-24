@@ -8,8 +8,15 @@
 </head>
 
 <body>
-    <h1 th:text="${Titulo}"></h1>
-    <h2 th:text="${Servidor}"></h2>
+    <h1>Lista de empleados</h1>
+    <ul>
+        <li><strong>ID:</strong> <span th:text="${empleado1.id}"></span></li>
+        <li><strong>Nombre:</strong> <span th:text="${empleado1.nombre}"></span></li>
+        <li><strong>Apellido:</strong> <span th:text="${empleado1.apellido}"></span></li>
+        <li><strong>Email:</strong> <span th:text="${empleado1.direccion}"></span></li>
+        <li><strong>Puesto:</strong> <span th:text="${empleado1.puesto}"></span></li>
+    </ul>
+
 </body>
 
 </html>
